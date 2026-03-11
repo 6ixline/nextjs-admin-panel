@@ -1,0 +1,11 @@
+export { default as PropertyBasicInfo } from "./PropertyBasicInfo";
+export { default as PropertyContactInfo } from "./PropertyContactInfo";
+export { default as PropertyLocationInfo } from "./PropertyLocationInfo";
+export { default as PropertyDetailsInfo } from "./PropertyDetailsInfo";
+export { default as PropertyPricingInfo } from "./PropertyPricingInfo";
+export { default as PropertyAmenities } from "./PropertyAmenities";
+export { default as PropertyMediaUpload } from "./PropertyMediaUpload";
+export { default as PropertyStatusInfo } from "./PropertyStatusInfo";
+export { default as PropertyPlotDetailsInfo } from "./PropertyPlotDetailsInfo";
+export { default as PropertyPGDetails } from "./PropertyPGDetails";
+export { default as PropertyDetailsCommericalInfo } from "./PropertyDetailsCommericalInfo";
