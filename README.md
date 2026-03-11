@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🖥️ Product Catalog — Admin Panel
+# 🖥️ Product Catalog - Admin Panel
 
 ### A production-grade admin dashboard built with Next.js 15, TypeScript & Tailwind CSS
 
@@ -15,7 +15,7 @@
 
 <br/>
 
-> A fully-featured, type-safe **admin dashboard** that connects to the [Product Catalog REST API](https://github.com/6ixline/nodejs-express-rest-api) — built with the latest Next.js App Router, server-side route protection, and a clean component architecture.
+> A fully-featured, type-safe **admin dashboard** that connects to the [Product Catalog REST API](https://github.com/6ixline/nodejs-express-rest-api) - built with the latest Next.js App Router, server-side route protection, and a clean component architecture.
 
 </div>
 
@@ -40,16 +40,16 @@
 
 ## 🔍 Overview
 
-This is the **frontend admin panel** for the Product Catalog platform. It provides a full management interface for admins to handle dealers, products, enquiries, internal users, and platform metrics — all in a responsive, dark-mode-ready dashboard.
+This is the **frontend admin panel** for the Product Catalog platform. It provides a full management interface for admins to handle dealers, products, enquiries, internal users, and platform metrics - all in a responsive, dark-mode-ready dashboard.
 
 Built with the **Next.js 15 App Router** and **React 19**, it uses the latest patterns including route groups, middleware-based auth guards, and server/client component separation.
 
 Key design decisions:
-- ✅ **Type-safe throughout** — every API response, form, and component is fully typed with TypeScript
-- ✅ **Smart data fetching** — TanStack Query handles caching, pagination, and background refetching
-- ✅ **Token refresh handled automatically** — Axios interceptors silently refresh expired tokens
-- ✅ **Route protection at the edge** — Next.js middleware guards all protected routes before render
-- ✅ **Form validation with schema** — React Hook Form + Zod for runtime-safe form handling
+- ✅ **Type-safe throughout** - every API response, form, and component is fully typed with TypeScript
+- ✅ **Smart data fetching** - TanStack Query handles caching, pagination, and background refetching
+- ✅ **Token refresh handled automatically** - Axios interceptors silently refresh expired tokens
+- ✅ **Route protection at the edge** - Next.js middleware guards all protected routes before render
+- ✅ **Form validation with schema** - React Hook Form + Zod for runtime-safe form handling
 
 ---
 
@@ -60,7 +60,7 @@ Key design decisions:
 <td>
 
 **📊 Dashboard**
-- Live metrics — Dealers, Products, Enquiries, Internal Users
+- Live metrics - Dealers, Products, Enquiries, Internal Users
 - Real-time count cards with navigation shortcuts
 - Dark mode support across all components
 - Responsive grid layout
@@ -69,8 +69,8 @@ Key design decisions:
 <td>
 
 **👥 User Management**
-- Dealer management — full CRUD + bulk delete
-- Internal user management — full CRUD
+- Dealer management - full CRUD + bulk delete
+- Internal user management - full CRUD
 - Paginated data tables with search & sort
 - Bulk selection and bulk status updates
 
@@ -150,9 +150,9 @@ Key design decisions:
 ```
 src/
 ├── app/
-│   ├── (Dashboard)/                    # Route group — protected pages
+│   ├── (Dashboard)/                    # Route group - protected pages
 │   │   ├── layout.tsx                  # Dashboard shell (sidebar + header)
-│   │   ├── page.tsx                    # Home — dashboard metrics
+│   │   ├── page.tsx                    # Home - dashboard metrics
 │   │   ├── dealer/
 │   │   │   ├── page.tsx                # Dealer listing table
 │   │   │   └── form/[[...id]]/page.tsx # Create / edit dealer (optional ID)
@@ -256,7 +256,7 @@ src/
 │   ├── ReactQueryProvider.tsx         # TanStack Query client provider
 │   └── utils.ts
 │
-└── middleware.ts                       # Next.js edge middleware — route auth guard
+└── middleware.ts                       # Next.js edge middleware - route auth guard
 ```
 
 ---
@@ -309,21 +309,21 @@ NEXT_PUBLIC_API_URL=http://localhost:5000
 | Route | Description | Auth |
 |-------|-------------|:----:|
 | `/login` | Admin login page | 🌐 Public |
-| `/` | Dashboard — live metrics overview | 🔒 |
-| `/dealer` | Dealer listing — paginated table with search | 🔒 |
+| `/` | Dashboard - live metrics overview | 🔒 |
+| `/dealer` | Dealer listing - paginated table with search | 🔒 |
 | `/dealer/form` | Create new dealer | 🔒 |
 | `/dealer/form/[id]` | Edit existing dealer | 🔒 |
 | `/internal-user` | Internal user listing | 🔒 |
 | `/internal-user/form` | Create internal user | 🔒 |
 | `/internal-user/form/[id]` | Edit internal user | 🔒 |
-| `/product` | Product listing — filters, search, bulk actions | 🔒 |
+| `/product` | Product listing - filters, search, bulk actions | 🔒 |
 | `/product/form` | Create product | 🔒 |
 | `/product/form/[id]` | Edit product | 🔒 |
 | `/enquiry` | Enquiry listing with status filters | 🔒 |
 | `/enquiry/form/[id]` | View & update enquiry | 🔒 |
 | `/change-password` | Admin change password | 🔒 |
 
-> 🔒 = Protected by Next.js middleware — unauthenticated users are redirected to `/login`
+> 🔒 = Protected by Next.js middleware - unauthenticated users are redirected to `/login`
 
 ---
 
@@ -389,7 +389,7 @@ User logs in → API sets admin_token cookie (HttpOnly)
 Redirect back to original path
 ```
 
-**Silent Token Refresh** — handled automatically in `axiosInstance.ts`:
+**Silent Token Refresh** - handled automatically in `axiosInstance.ts`:
 
 ```
 API call returns 401
@@ -449,7 +449,7 @@ axiosInstance                  ← base URL, credentials, token refresh
 
 This admin panel is the frontend for the **Product Catalog REST API**:
 
-> 🔧 **[nodejs-express-rest-api](https://github.com/6ixline/nodejs-express-rest-api)** — Node.js + Express 5 + MySQL backend with multi-role JWT auth, bulk Excel import, and 40+ REST endpoints.
+> 🔧 **[nodejs-express-rest-api](https://github.com/6ixline/nodejs-express-rest-api)** - Node.js + Express 5 + MySQL backend with multi-role JWT auth, bulk Excel import, and 40+ REST endpoints.
 
 Together they form a complete, production-ready full-stack system.
 
